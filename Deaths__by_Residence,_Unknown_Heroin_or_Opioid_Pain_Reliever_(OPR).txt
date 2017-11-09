@@ -1,0 +1,323 @@
+Counties	1999	2000	2001	2002	2003	2004	2005	2006	2007	2008	2009	2010	2011	2012	2013	2014	2015	2016	Total
+		
+
+Appling	 	 	 	 	 	 	 	 	 	 	 	 	2 	2 	1 	 	1 	 	6 	
+
+Atkinson	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Bacon	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Baker	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Banks	 	 	 	 	 	 	 	 	 	 	 	 	1 	1 	 	 	 	1 	3 	
+
+Ben Hill	 	 	 	 	1 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	
+
+Berrien	 	 	 	 	 	 	 	 	 	 	1 	 	 	1 	1 	 	 	 	3 	
+
+Bleckley	1 	 	1 	 	1 	 	 	 	 	 	 	 	 	1 	1 	 	 	 	5 	
+
+Brantley	 	 	 	 	 	 	 	 	 	 	1 	1 	3 	 	1 	1 	 	1 	8 	
+
+Brooks	 	 	 	 	 	 	1 	 	 	 	 	 	 	 	 	 	 	 	1 	
+
+Bryan	 	1 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	
+
+Burke	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	1 	1 	 	3 	
+
+Butts	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	2 	 	1 	4 	
+
+Calhoun	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Candler	 	 	 	 	 	 	 	 	 	 	1 	 	 	 	 	2 	2 	 	5 	
+
+Charlton	 	 	 	 	 	 	 	 	 	 	 	 	 	 	2 	 	1 	 	3 	
+
+Chattahoochee	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Chattooga	 	1 	 	 	 	 	 	 	 	1 	1 	 	 	1 	 	 	1 	 	5 	
+
+Clay	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Clinch	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Cook	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	 	 	1 	 	2 	
+
+Crawford	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Crisp	 	 	 	 	1 	 	 	 	1 	 	 	1 	 	 	 	 	 	 	3 	
+
+Dade	 	 	 	 	 	 	1 	1 	 	 	 	1 	 	 	 	 	 	 	3 	
+
+Dawson	 	 	 	 	 	1 	 	 	 	 	 	1 	 	 	 	 	1 	 	3 	
+
+Decatur	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	 	 	 	1 	
+
+Dodge	 	1 	1 	 	 	 	 	 	1 	2 	1 	 	 	 	 	 	 	1 	7 	
+
+Dooly	 	 	 	1 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	
+
+Early	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Echols	 	 	 	1 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	
+
+Elbert	 	 	 	1 	 	 	 	 	 	1 	 	 	 	 	 	1 	 	1 	4 	
+
+Emanuel	 	 	 	 	 	 	 	 	 	1 	 	 	 	 	 	1 	 	 	2 	
+
+Evans	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Fannin	 	 	 	 	 	 	2 	1 	2 	 	 	3 	1 	 	 	 	1 	 	10 	
+
+Franklin	 	 	 	1 	 	 	1 	 	 	 	 	 	2 	1 	 	 	1 	1 	7 	
+
+Gilmer	 	 	 	 	 	 	1 	 	1 	 	1 	1 	 	3 	 	 	1 	1 	9 	
+
+Glascock	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Grady	 	 	 	 	 	 	 	 	 	1 	 	1 	 	 	 	 	 	 	2 	
+
+Greene	 	 	 	 	 	 	 	 	1 	 	 	 	 	 	1 	 	 	 	2 	
+
+Hancock	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Haralson	 	 	 	 	 	 	 	 	1 	1 	2 	3 	 	2 	1 	2 	1 	2 	15 	
+
+Harris	 	 	 	 	 	 	1 	1 	 	 	 	1 	1 	 	 	1 	 	2 	7 	
+
+Hart	 	 	 	1 	 	 	 	 	 	2 	 	 	 	 	 	 	 	1 	4 	
+
+Heard	1 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	
+
+Irwin	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	 	 	1 	
+
+Jasper	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Jeff Davis	 	 	 	 	 	 	 	2 	 	 	 	1 	 	 	1 	1 	 	1 	6 	
+
+Jefferson	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	1 	 	 	2 	
+
+Jenkins	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Johnson	 	 	 	 	 	1 	 	 	 	 	 	 	 	 	 	 	 	 	1 	
+
+Jones	 	 	 	2 	 	1 	 	 	1 	 	 	 	 	 	 	 	 	 	4 	
+
+Lamar	 	 	 	 	 	 	 	 	 	1 	 	1 	1 	 	 	 	1 	 	4 	
+
+Lanier	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Lee	 	 	 	 	 	1 	 	 	 	 	 	1 	 	 	 	 	 	 	2 	
+
+Lincoln	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Long	 	 	 	 	 	 	 	 	 	 	2 	 	 	 	 	 	1 	 	3 	
+
+Lumpkin	 	 	1 	 	 	 	 	 	1 	 	 	 	1 	 	1 	1 	 	 	5 	
+
+McDuffie	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+McIntosh	 	 	 	 	 	 	 	 	1 	 	 	 	 	 	 	 	 	 	1 	
+
+Macon	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Madison	 	 	1 	 	 	1 	1 	 	 	 	1 	 	 	 	1 	 	 	1 	6 	
+
+Marion	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Meriwether	 	 	 	1 	1 	 	1 	 	1 	 	 	 	1 	 	1 	1 	 	 	7 	
+
+Miller	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Mitchell	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	1 	 	2 	
+
+Monroe	 	1 	 	 	 	 	 	 	 	 	 	 	 	1 	 	1 	 	 	3 	
+
+Montgomery	 	 	 	 	 	 	 	 	 	 	 	 	1 	1 	 	 	 	 	2 	
+
+Morgan	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	 	 	 	 	1 	
+
+Oconee	 	 	 	 	 	 	 	 	 	 	 	2 	1 	 	 	1 	 	 	4 	
+
+Oglethorpe	 	 	 	 	 	 	 	 	 	1 	 	 	1 	1 	 	2 	1 	 	6 	
+
+Peach	 	 	 	 	 	 	 	 	 	1 	 	 	 	 	 	 	 	 	1 	
+
+Pickens	 	 	 	 	 	 	1 	 	1 	 	 	2 	1 	2 	 	 	 	1 	8 	
+
+Pierce	 	 	 	 	 	 	1 	 	 	 	1 	 	1 	 	1 	 	 	3 	7 	
+
+Pike	 	1 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	
+
+Pulaski	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	3 	3 	
+
+Putnam	 	 	 	 	 	 	 	 	 	 	1 	 	 	1 	 	1 	1 	 	4 	
+
+Quitman	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Rabun	 	 	 	 	 	 	 	 	1 	 	1 	 	 	 	 	 	 	 	2 	
+
+Randolph	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Schley	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Screven	 	 	 	 	 	 	 	 	 	 	 	1 	 	 	 	 	 	 	1 	
+
+Seminole	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	 	 	 	1 	
+
+Stephens	 	 	 	 	 	 	 	 	 	 	1 	 	1 	3 	1 	2 	1 	 	9 	
+
+Stewart	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Sumter	 	 	 	 	 	1 	 	 	 	 	 	1 	 	 	 	 	 	 	2 	
+
+Talbot	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Taliaferro	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Tattnall	 	 	 	 	 	 	1 	 	 	 	1 	 	1 	 	1 	 	1 	 	5 	
+
+Taylor	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	1 	
+
+Telfair	 	 	 	 	 	 	 	 	 	1 	1 	 	1 	 	 	 	 	 	3 	
+
+Terrell	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Toombs	 	 	 	 	 	 	 	 	 	1 	1 	 	 	 	 	2 	 	 	4 	
+
+Towns	 	 	 	 	 	 	1 	 	 	 	 	 	 	1 	 	 	 	1 	3 	
+
+Treutlen	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Turner	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Twiggs	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Union	 	 	 	1 	 	 	 	 	1 	 	 	 	1 	 	 	1 	 	2 	6 	
+
+Upson	 	 	 	 	 	 	 	 	 	 	 	2 	 	 	 	1 	 	 	3 	
+
+Warren	 	1 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	
+
+Washington	 	 	 	 	1 	 	 	 	 	 	 	 	 	 	1 	 	 	 	2 	
+
+Wayne	 	 	 	 	1 	1 	 	 	 	1 	1 	1 	3 	 	5 	1 	3 	 	17 	
+
+Webster	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Wheeler	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+White	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	1 	1 	 	3 	
+
+Wilcox	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	1 	
+
+Wilkes	 	 	 	 	 	 	 	 	 	1 	 	 	 	1 	 	 	 	 	2 	
+
+Wilkinson	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	 	1 	
+
+Worth	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	 	 	 	1 	
+
+Baldwin	 	 	 	 	 	 	1 	 	 	 	 	 	 	 	1 	 	 	 	2 	
+
+Barrow	 	 	 	2 	1 	 	 	2 	 	3 	1 	 	2 	 	 	2 	1 	1 	15 	
+
+Bartow	 	1 	1 	1 	 	1 	 	 	 	 	2 	2 	 	2 	1 	1 	 	5 	17 	
+
+Bibb	2 	2 	1 	3 	 	3 	3 	 	2 	 	2 	 	2 	 	 	1 	2 	 	23 	
+
+Bulloch	 	 	 	 	 	 	2 	1 	1 	1 	1 	2 	1 	3 	1 	1 	1 	1 	16 	
+
+Camden	 	 	 	 	 	 	 	 	 	 	3 	 	2 	2 	2 	 	1 	1 	11 	
+
+Carroll	 	 	 	 	2 	2 	 	2 	2 	4 	4 	6 	4 	4 	1 	2 	5 	6 	44 	
+
+Catoosa	 	 	 	1 	1 	 	 	 	 	1 	 	1 	1 	1 	 	1 	 	3 	10 	
+
+Chatham	5 	3 	7 	3 	 	2 	 	1 	5 	5 	5 	9 	6 	8 	10 	2 	7 	1 	79 	
+
+Cherokee	 	1 	1 	2 	1 	 	 	2 	2 	2 	6 	2 	2 	5 	2 	4 	5 	4 	41 	
+
+Clarke	 	 	 	 	1 	 	1 	2 	1 	2 	2 	 	2 	1 	1 	4 	1 	2 	20 	
+
+Clayton	1 	1 	3 	3 	3 	1 	1 	 	3 	3 	8 	6 	3 	7 	6 	1 	5 	7 	62 	
+
+Cobb	13 	17 	13 	11 	3 	2 	2 	1 	 	2 	2 	 	1 	5 	1 	10 	9 	16 	108 	
+
+Coffee	 	 	 	 	 	 	1 	 	1 	 	1 	 	 	1 	 	 	 	 	4 	
+
+Colquitt	 	 	1 	 	 	 	 	 	 	 	 	1 	 	 	 	 	1 	 	3 	
+
+Columbia	 	1 	 	 	 	 	 	 	 	 	1 	1 	1 	 	1 	 	2 	3 	10 	
+
+Coweta	 	 	 	 	 	 	1 	1 	2 	2 	 	2 	3 	1 	1 	3 	 	2 	18 	
+
+DeKalb	5 	1 	8 	9 	9 	4 	6 	12 	7 	6 	7 	7 	15 	23 	9 	11 	9 	12 	160 	
+
+Dougherty	1 	 	2 	1 	 	 	 	 	1 	1 	3 	 	 	1 	 	1 	1 	 	12 	
+
+Douglas	 	2 	 	1 	 	1 	 	 	1 	1 	 	1 	1 	3 	 	2 	1 	4 	18 	
+
+Effingham	 	 	 	 	1 	 	 	 	 	 	2 	2 	2 	1 	2 	1 	 	1 	12 	
+
+Fayette	1 	 	 	1 	 	1 	1 	 	1 	1 	1 	2 	3 	 	1 	 	2 	2 	17 	
+
+Floyd	 	1 	 	 	2 	 	2 	 	1 	5 	1 	4 	1 	3 	5 	2 	4 	2 	33 	
+
+Forsyth	2 	 	 	1 	 	2 	 	1 	2 	2 	3 	2 	4 	4 	7 	3 	3 	2 	38 	
+
+Fulton	27 	28 	45 	21 	44 	25 	27 	23 	16 	22 	15 	22 	13 	25 	21 	24 	29 	42 	469 	
+
+Glynn	1 	 	 	 	 	1 	 	1 	1 	2 	 	 	2 	2 	4 	4 	1 	1 	20 	
+
+Gordon	 	1 	 	 	1 	 	 	 	 	 	 	 	2 	2 	2 	 	 	1 	9 	
+
+Gwinnett	1 	1 	2 	4 	1 	1 	3 	2 	4 	8 	9 	12 	6 	18 	17 	13 	15 	10 	127 	
+
+Habersham	 	 	 	 	 	 	 	 	 	 	 	2 	 	2 	1 	 	 	1 	6 	
+
+Hall	 	1 	 	3 	1 	2 	1 	 	 	1 	 	1 	 	2 	 	2 	 	 	14 	
+
+Henry	 	1 	2 	 	2 	 	 	2 	 	1 	1 	1 	4 	2 	 	4 	1 	1 	22 	
+
+Houston	 	 	 	 	1 	 	 	 	 	 	 	1 	 	1 	 	3 	 	 	6 	
+
+Jackson	 	 	 	 	 	 	 	 	 	1 	1 	2 	3 	1 	1 	2 	2 	1 	14 	
+
+Laurens	 	 	 	 	1 	 	 	 	 	1 	 	1 	1 	 	 	1 	 	 	5 	
+
+Liberty	 	1 	 	 	 	 	1 	1 	 	1 	 	 	1 	3 	3 	1 	1 	 	13 	
+
+Lowndes	 	1 	2 	 	 	 	2 	 	 	 	 	 	1 	 	 	 	 	 	6 	
+
+Murray	 	 	 	 	 	 	 	 	 	1 	2 	2 	3 	 	 	1 	 	2 	11 	
+
+Muscogee	 	 	 	1 	1 	 	 	1 	2 	1 	4 	3 	2 	5 	2 	9 	2 	3 	36 	
+
+Newton	 	 	 	 	 	 	 	1 	 	 	1 	1 	2 	1 	3 	1 	1 	1 	12 	
+
+Paulding	 	 	 	1 	 	 	 	 	1 	4 	1 	3 	2 	2 	1 	6 	3 	5 	29 	
+
+Polk	1 	 	 	1 	 	2 	 	 	 	 	 	 	 	1 	2 	 	1 	1 	9 	
+
+Richmond	1 	 	 	1 	2 	 	1 	1 	1 	 	1 	1 	1 	1 	2 	3 	5 	8 	29 	
+
+Rockdale	 	1 	 	 	2 	 	1 	1 	 	1 	1 	 	1 	3 	1 	1 	1 	1 	15 	
+
+Spalding	 	 	 	 	1 	 	 	1 	2 	2 	3 	1 	2 	3 	 	1 	1 	1 	18 	
+
+Thomas	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	1 	 	1 	
+
+Tift	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	
+
+Troup	 	 	 	 	 	2 	 	2 	 	 	1 	1 	3 	 	1 	1 	1 	 	12 	
+
+Walker	 	 	 	 	 	 	 	 	1 	1 	 	2 	2 	1 	2 	1 	 	1 	11 	
+
+Walton	 	 	1 	 	1 	1 	1 	 	 	1 	 	 	2 	5 	5 	2 	 	4 	23 	
+
+Ware	 	 	 	1 	 	 	 	 	 	2 	2 	 	1 	 	 	1 	 	 	7 	
+
+Whitfield	 	 	 	 	 	 	 	 	2 	 	1 	 	 	2 	 	1 	 	 	6 	
+
+County Summary	63 	71 	93 	81 	88 	60 	71 	66 	76 	107 	117 	131 	135 	182 	148 	164 	149 	185 	1,987 	
+Copyright © 2003-2017 Version:1.1 Georgia Department of Public Health, Office of Health Indicators for Planning, all rights reserved. Contact us - ohip@dhr.state.ga.us
