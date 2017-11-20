@@ -28,3 +28,11 @@ List of Cleaned Data (14):
 11. GA Counties birth_rate
 12. GA Counties death_rate
 13. GA Counties Unemployment Rate
+
+Version 0.5
+List of Cleaned Data (16):
+
+14. GA Counties EMS
+15. GA Counties rehab
+
+
