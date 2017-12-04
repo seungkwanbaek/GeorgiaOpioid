@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+        <title>Georgia Opioid Crisis</title>
+</head>
+    <style>
+
+    body {
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        font-size:.8em;
+    }
+    .slider {
+      position: relative;
+      top: 40px;
+      left: 0px;
+    }
+    .slider-tray {
+      position: relative;
+      width: 100%;
+      height: 16px;
+      border: solid 1px #ccc;
+      background-color: #f0f0f0;
+    }
+    .slider-handle {
+      position: relative;
+      top: -15px;
+      left: 0px;
+    }
+    .slider-handle-icon {
+      width: 25px;
+      height: 25px;
+      border: solid 1px #aaa;
+      position: relative;
+      background-color: #fff;
+      top: -7px;
+      left: -7px;
+      position: relative; 
+    }
+    .d3-container {
+            width: 600px;
+    }
+    .leg {
+            width: 600px;
+    }
+    .label {
+            width: 600px;
+    }
+    .state {
+            fill:none;
+            stroke: black;
+            stroke-width: 3px;
+            stroke-opacity: 1;
+    }
+    .county {
+            fill:lightgray;
+            stroke: none;
+
+    }
+    .county-boundary {
+            fill: none;
+            stroke: black;
+            stroke-dasharray: 2,2;
+    }
+
+    .header {
+            font-size:2em;
+    }
+
+    .title {
+            font-size:2.25em;
+    }
+
+    .info {
+            font-size:1.5em;
+    } 
+</style>
+<body>
+    <div class="slider"></div>
+    <div class="d3-container" id= "container"></div>
+    <div class = "leg" id= "leg"></div>
+    <div class = "label" id="label"></div>
+
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/d3.v3.min.js"></script>
+    <script src="lib/d3-queue.v3.min.js"></script>
+    <script src="lib/topojson.v1.min.js"></script>
+    <script src="lib/d3.tip.v0.6.3.js"></script>
+    <script>
+        document.getElementById("container").style.position = "absolute";
+        document.getElementById("container").style.top = "100px";
+        document.getElementById("container").style.left = "50px";
+        document.getElementById("leg").style.position = "absolute";
+        document.getElementById("leg").style.top = "900px";
+        document.getElementById("leg").style.left = "100px";
+        document.getElementById("label").position = "absolute";
+        document.getElementById("label").style.top = "0px";
+        document.getElementById("label").style.left = "0px";        
+        
+        //setting basic d3 variabls
+        width = 675;
+        height = 750;
+        var colors = ['#ffffcc','#800026'];
+        resource = 1;
+
+        //placing canvas
+        var svg = d3.select('.d3-container').append('svg')
+            .attr('width', width)
+            .attr('height', height);
+        
+        //defining projection, scale and path
+        var projection = d3.geo.mercator()
+            .translate([11212.5, 4912.5])
+            .scale(7500);
+        var path = d3.geo.path()
+            .projection(projection);
+        
+        //loading file of state and county geometry
+        d3.json('ga.json', function(error, ga) {
+            georgia = topojson.feature(ga, ga.objects.states);
+            cts = topojson.feature(ga, ga.objects.counties);   
+        
+            //loading data
+            d3.csv('predictions.csv', function(error, data) {
+                //mapping data to county in json file 
+                _.each(data, function(cnty) {
+                    //ensure county is in json file
+                    var county = _.filter(cts.features, function(d) {
+                        var countyName = d.properties.NAME_2.trim().toLowerCase(),
+                            check = cnty.County.trim().toLowerCase();
+                        return countyName === check;
+                    });
+                    if (county[0]) {    
+                        county[0].properties.risk_00 = +cnty["Risk_00"];
+                        county[0].properties.risk_01 = +cnty["Risk_01"];
+                        county[0].properties.risk_02= +cnty["Risk_02"];
+                        county[0].properties.risk_03= +cnty["Risk_03"];
+                        county[0].properties.risk_04 = +cnty["Risk_04"];
+                        county[0].properties.risk_05= +cnty["Risk_05"];
+
+                    }
+                });            
+                        
+                //draw chart
+                createchart(ga);
+
+                //creating legend
+                //find seperation values
+                var quantile = d3.scale.quantile()
+                    .domain([0, 1])
+                    .range(colors);
+                var qs = quantile.quantiles();
+                var legend = d3.select(".leg").append("svg").attr("width", width).attr("height", 200);
+                //add a rectangle for the legend
+                legend.selectAll("rect").data(qs).enter().append("rect").attr("width", 70).attr("height", 25)
+                    .attr("x", function(d){return qs.indexOf(d)*(((width/colors.length)+0))})
+                    .attr("fill", function(d){return colors[qs.indexOf(d)+1]});       
+                //add text to legend
+                legend.selectAll("text").data(qs).enter().append("text")
+                    .text(function(d){return "At Risk";}).style("font-size", "15px").style("font-family", "Calibri").style("font-weight", 800)
+                    .attr("x", function(d){return qs.indexOf(d)*(((width/colors.length)+0))})
+                    .attr("y", 40);
+            });
+        
+            //function that creatas map 
+            var createchart = function(ga){
+                //for finding color scale
+                var quantize = d3.scale.quantize()
+                    .domain([0, 1])
+                    .range(colors);
+
+                //creating the path for the state outline
+                svg.append('path')
+                    .datum(georgia)
+                    .attr('class', 'state')
+                    .attr('d', path);
+
+                //creating paths for each county
+                var g = svg.selectAll('.subunit')
+                    .data(cts.features)
+                    .enter().append('path')
+                    .attr("fill", function(d) { return quantize(predict(d));})
+                    .attr('d', path)
+                    .on("mouseover", function (d) {
+                        d3.select(this).attr("fill", "grey");
+                        hover(d, true);
+                    })
+                    .on("mouseout", function (d) {
+                        d3.select(this).attr("fill", function(d) {return quantize(predict(d)); })
+                        hover(d, false);      
+                    });
+
+                //creating boundary lines between counties
+                svg.append('path')
+                    .datum(topojson.mesh(ga, ga.objects.counties, function(a, b) { return a.properties.NAME_2 !== b.properties.NAME_2;}))
+                    .attr('d', path)
+                    .attr('class', 'county-boundary');
+                            
+
+                //creating canvas for title, hover data
+                header = svg
+                    .append('text')
+                    .attr('y', 65)
+                    .attr('x', 350)
+                    .attr('class', 'header')
+                    .text("");
+                numdeaths = svg
+                    .append('text')
+                    .attr('y', 90)
+                    .attr('x', 350)
+                    .attr('class', 'info')
+                    .text("");
+                title = svg
+                    .append('text')
+                    .attr('y', 35)
+                    .attr('x', 350)
+                    .attr('class', 'title')
+                    .text("Georgia Opioid Crisis");
+            }
+
+            //function called when hovering over counties
+            var hover = function(data, bool) {        
+                if (bool) {    
+                    title = data.properties.NAME_2.trim() + ' County';
+                    header.text(data.properties.NAME_2.trim() + ' County');
+                    //numdeaths.text("Predicted Deaths: " + predict(data) + " per 100,000");
+
+                } else {
+                    header.text("");
+                    numdeaths.text("");
+                }
+            };
+
+
+            var predict = function(data){
+
+                return data.properties["risk_"+ ("0" + resource).split('.')[0]];
+            }
+
+            //create scale for slider to use
+            var x = d3.scale.linear()
+                .domain([0, 4])
+                .range([0, width])
+                .clamp(true);
+
+            //append slider elements to svg
+            var dispatch2 = d3.dispatch("sliderChange");
+            var slider2 = d3.select(".slider").append("slider")
+                .style("width", width + "px");
+            var sliderTray2 = slider2.append("div")
+                .attr("class", "slider-tray")
+                .style("width", width + "px");
+            var sliderHandle2 = slider2.append("div")
+                .attr("class", "slider-handle");
+            sliderHandle2.append("div")
+                .attr("class", "slider-handle-icon")
+                .text("Resource Level")
+            //when drag is finished, create new chart
+            slider2.call(d3.behavior.drag()
+                .on("dragstart", function() {
+                    dispatch2.sliderChange(x.invert(d3.mouse(sliderTray2.node())[0]));
+                    d3.event.sourceEvent.preventDefault();
+                })
+                .on("drag", function() {
+                    dispatch2.sliderChange(x.invert(d3.mouse(sliderTray2.node())[0]));
+                })
+                .on("dragend", function(value){
+                    hover(null, false, null);
+                    resource =  (Math.round(x.invert(d3.mouse(sliderTray2.node())[0]))).toFixed(1);
+                    console.log("resource, " + resource)
+                    createchart(ga);
+                }));
+            dispatch2.on("sliderChange.slider", function(value) {
+                sliderHandle2.style("left", x(value) + "px");
+            });
+            var label = d3.select(".label").append("svg").attr("width", width).attr("height", 90);
+            //append labels to slider
+            ratios = [1.0, 1.25, 1.5, 1.75, 2.0];
+            label.selectAll("text").data(ratios).enter().append("text")
+                .text(function(d){return d;})
+                .attr("x", function(d){
+                    if(ratios.indexOf(d) == 0){return 0;}
+                    else{
+                    return -10+ratios.indexOf(d)*(width/(ratios.length-1))}})
+                .attr("y", 40);
+        });
+    </script>
+</body>

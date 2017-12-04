@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+        <title>Georgia Opioid Crisis</title>
+</head>
+    <style>
+
+    body {
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        font-size:.8em;
+    }
+    .slider {
+      position: relative;
+      top: 40px;
+      left: 0px;
+    }
+    .slider-tray {
+      position: absolute;
+      width: 100%;
+      height: 16px;
+      border: solid 1px #ccc;
+      background-color: #f0f0f0;
+    }
+    .slider-handle {
+      position: absolute;
+      top: 3px;
+    }
+    .slider-handle-icon {
+      width: 25px;
+      height: 25px;
+      border: solid 1px #aaa;
+      position: absolute;
+      background-color: #fff;
+      top: -7px;
+      left: -7px;
+    }
+    .d3-container {
+            width: 600px;
+    }
+    .leg {
+            width: 600px;
+    }
+    .label {
+            width: 600px;
+    }
+    .state {
+            fill:none;
+            stroke: black;
+            stroke-width: 3px;
+            stroke-opacity: 1;
+    }
+    .county {
+
+            stroke: none;
+
+    }
+    .county:hover {
+            fill:gray;
+            stroke: none;
+
+    }
+    .county-boundary {
+            fill: none;
+            stroke: black;
+            stroke-dasharray: 2,2;
+    }
+    .header {
+            font-size:2em;
+    }
+    .title {
+            font-size:2.25em;
+    }
+    .info {
+            font-size:1.5em;
+    } 
+    .d3-tip {
+        line-height: 1;
+        font-weight: bold;
+        padding: 2px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        border-radius: 2px;
+        font-size: 14px;
+    }
+</style>
+<body>
+    <div class="slider"></div>
+    <div class="d3-container" id= "container"></div>
+    <div class = "leg" id= "leg"></div>
+    <div class = "label" id="label"></div>
+
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/d3.v3.min.js"></script>
+    <script src="lib/topojson.v1.min.js"></script>
+    <script src="lib/d3.tip.v0.6.3.js"></script>
+    <script>
+        document.getElementById("container").style.position = "absolute";
+        document.getElementById("container").style.top = "100px";
+        document.getElementById("container").style.left = "50px";
+        document.getElementById("leg").style.position = "absolute";
+        document.getElementById("leg").style.top = "875px";
+        document.getElementById("leg").style.left = "100px";
+        document.getElementById("label").position = "absolute";
+        document.getElementById("label").style.top = "100px";
+        document.getElementById("label").style.left = "100px";        
+        
+        //setting basic d3 variabls
+        width = 650;
+        height = 750;
+        var colors = ['#ffffcc','#ffeda0','#fed976','#feb24c','#fd8d3c','#fc4e2a','#e31a1c','#bd0026','#800026'];
+        var max = 0;
+        
+        //placing canvas
+        var svg = d3.select('.d3-container').append('svg')
+            .attr('width', width)
+            .attr('height', height);
+        
+        //defining projection, scale and path
+        var projection = d3.geo.mercator()
+            .translate([11212.5, 4912.5])
+            .scale(7500);
+        var path = d3.geo.path()
+            .projection(projection);
+        
+        //loading file of state and county geometry
+        d3.json('ga.json', function(error, ga) {
+            georgia = topojson.feature(ga, ga.objects.states);
+            cts = topojson.feature(ga, ga.objects.counties);   
+        
+            //loading data
+            d3.csv('data.csv', function(error, data) {
+
+                //mapping data to county in json file 
+                _.each(data, function(cnty) {
+                    //ensure county is in json file
+                    var county = _.filter(cts.features, function(d) {
+                        var countyName = d.properties.NAME_2.trim().toLowerCase(),
+                            check = cnty.Counties.trim().toLowerCase();
+                        return countyName === check;
+                    });
+                    if (county[0]) {     
+                        //add to county's properties   
+                        county[0].properties.x1999 = +cnty["1999"];
+                        county[0].properties.x2000 = +cnty["2000"];
+                        county[0].properties.x2001 = +cnty["2001"];
+                        county[0].properties.x2002 = +cnty["2002"];
+                        county[0].properties.x2003 = +cnty["2003"];
+                        county[0].properties.x2004 = +cnty["2004"];
+                        county[0].properties.x2005 = +cnty["2005"];
+                        county[0].properties.x2006 = +cnty["2006"];
+                        county[0].properties.x2007 = +cnty["2007"];
+                        county[0].properties.x2008 = +cnty["2008"];
+                        county[0].properties.x2009 = +cnty["2009"];
+                        county[0].properties.x2010 = +cnty["2010"];
+                        county[0].properties.x2011 = +cnty["2011"];
+                        county[0].properties.x2012 = +cnty["2012"];
+                        county[0].properties.x2013 = +cnty["2013"];
+                        county[0].properties.x2014 = +cnty["2014"];
+                        county[0].properties.x2015 = +cnty["2015"];
+                        county[0].properties.x2016 = +cnty["2016"];
+
+                        //to determine max value (for scaling later)
+                        if (county[0].properties.x1999 > max){max = county[0].properties.x1999;}
+                        if (county[0].properties.x2000 > max){max = county[0].properties.x2000;}
+                        if (county[0].properties.x2001 > max){max = county[0].properties.x2001;}
+                        if (county[0].properties.x2002 > max){max = county[0].properties.x2002;}
+                        if (county[0].properties.x2003 > max){max = county[0].properties.x2003;}
+                        if (county[0].properties.x2004 > max){max = county[0].properties.x2004;}
+                        if (county[0].properties.x2005 > max){max = county[0].properties.x2005;}
+                        if (county[0].properties.x2006 > max){max = county[0].properties.x2006;}
+                        if (county[0].properties.x2007 > max){max = county[0].properties.x2007;}
+                        if (county[0].properties.x2008 > max){max = county[0].properties.x2008;}
+                        if (county[0].properties.x2009 > max){max = county[0].properties.x2009;}
+                        if (county[0].properties.x2010 > max){max = county[0].properties.x2010;}
+                        if (county[0].properties.x2011 > max){max = county[0].properties.x2011;}
+                        if (county[0].properties.x2012 > max){max = county[0].properties.x2012;}
+                        if (county[0].properties.x2013 > max){max = county[0].properties.x2013;}
+                        if (county[0].properties.x2014 > max){max = county[0].properties.x2014;}
+                        if (county[0].properties.x2015 > max){max = county[0].properties.x2015;}
+                        if (county[0].properties.x2016 > max){max = county[0].properties.x2016;}
+                    }
+                });                        
+                        
+                //draw chart, default at 1999
+                createchart(1999, ga);
+
+                //creating legend
+                //find seperation values
+                var quantile = d3.scale.quantile()
+                    .domain([0, max])
+                    .range(colors);
+                var qs = quantile.quantiles();
+                var legend = d3.select(".leg").append("svg").attr("width", width).attr("height", 200);
+                //add rectangles with different colors to legend
+                legend.selectAll("rect").data(qs).enter().append("rect").attr("width", (width)/colors.length).attr("height", 25)
+                    .attr("x", function(d){return qs.indexOf(d)*(((width/colors.length)+0))})
+                    .attr("fill", function(d){return colors[qs.indexOf(d)+1]});       
+                //add text to legend
+                legend.selectAll("text").data(qs).enter().append("text")
+                    .text(function(d){return "" + Math.round(d)}).style("font-size", "15px").style("font-family", "Calibri").style("font-weight", 800)
+                    .attr("x", function(d){return qs.indexOf(d)*(((width/colors.length)+0))})
+                    .attr("y", 40);
+            });
+        
+            //function that creatas map given the year
+            var createchart = function(year, ga){
+                var tip = d3.tip()
+                    .attr('class', 'd3-tip')
+                    //.style("left", d.attr("x") + "px")     
+                    //.style("top", d.attr("y") + "px")
+                    .attr("tooltipCaretSize", 0)
+                    .html(function(d) {
+                        return "" + d.properties["NAME_2"] + " County<br> Deaths: " + d.properties["x" + year] + " per 100,000";
+                });
+                //for finding color scale
+                var quantize = d3.scale.quantize()
+                    .domain([0, max])
+                    .range(colors);
+
+                //creating the path for the state outline
+                svg.append('path')
+                    .datum(georgia)
+                    .attr('class', 'state')
+                    .attr('d', path);
+
+                svg.call(tip);
+
+                //creating paths for each county
+                var g = svg.selectAll('.subunit')
+                    .data(cts.features)
+                    .enter().append('path')
+                    .attr("class", "county")
+                    .attr("fill", colors[0])
+                    .attr('d', path)
+                    /*.on("mouseover", function (d) {
+                        tip.show;
+                        //d3.select(this).attr("fill", "grey");
+                        hover(d, true, year);
+                    })
+                    .on("mouseout", function (d) {
+                        tip.hide;
+                        //d3.select(this).attr("fill", function(d) { return quantize(d.properties["x" + year]); })
+                        hover(d, false, year);      
+                    })*/
+                    .on("mouseover", tip.show)
+                    .on("mouseout", tip.hide);
+                g.transition().duration(1000)
+                    .attr("fill", function(d) { return quantize(d.properties["x" + year]); });
+
+
+
+                //creating boundary lines between counties
+                svg.append('path')
+                    .datum(topojson.mesh(ga, ga.objects.counties, function(a, b) { return a.properties.NAME_2 !== b.properties.NAME_2;}))
+                    .attr('d', path)
+                    .attr('class', 'county-boundary');
+                            
+
+                //creating canvas for title, hover data
+                header = svg
+                    .append('text')
+                    .attr('y', 65)
+                    .attr('x', 350)
+                    .attr('class', 'header')
+                    .text("");
+                numdeaths = svg
+                    .append('text')
+                    .attr('y', 90)
+                    .attr('x', 350)
+                    .attr('class', 'info')
+                    .text("");
+                title = svg
+                    .append('text')
+                    .attr('y', 35)
+                    .attr('x', 350)
+                    .attr('class', 'title')
+                    .text("Georgia Opioid Crisis");
+            }
+
+            //create scale for slider to use
+            var x = d3.scale.linear()
+                .domain([1999, 2016])
+                .range([0, width])
+                .clamp(true);
+            //append slider elements to svg
+            var dispatch = d3.dispatch("sliderChange");
+            var slider = d3.select(".slider")
+                .style("width", width + "px");
+            var sliderTray = slider.append("div")
+                .attr("class", "slider-tray");
+            var sliderHandle = slider.append("div")
+                .attr("class", "slider-handle");
+            sliderHandle.append("div")
+                .attr("class", "slider-handle-icon")
+            //when drag is finished, create new chart with the year
+            slider.call(d3.behavior.drag()
+                .on("dragstart", function() {
+                  dispatch.sliderChange(x.invert(d3.mouse(sliderTray.node())[0]));
+                  d3.event.sourceEvent.preventDefault();
+                })
+                .on("drag", function() {
+                  dispatch.sliderChange(x.invert(d3.mouse(sliderTray.node())[0]));
+                })
+                .on("dragend", function(value){
+                    createchart(Math.round(x.invert(d3.mouse(sliderTray.node())[0])), ga);
+                }));
+            dispatch.on("sliderChange.slider", function(value) {
+                sliderHandle.style("left", x(value) + "px");
+            });
+            //create labels for the slider
+            var label = d3.select(".label").append("svg").attr("width", width).attr("height", 200);
+            //append labels to slider
+            years = [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016];
+            label.selectAll("text").data(years).enter().append("text")
+                .text(function(d){return d})
+                .attr("x", function(d){return years.indexOf(d)*(((width/years.length)))})
+                .attr("y", 75);
+
+
+        });
+    </script>
+</body>
