@@ -1,5 +1,18 @@
 # GeorgiaOpioid
-CSE6242 Fall2017 GA counties Opioid Overdose
+
+A tool that predicts which counties in Georgia will be hit with a significant opioid overdose crisis. It also includes a visual interactive tool using D3.js to show the aforementioned counties and how the overdose rates will be affected when the amount of health resources (e.g. number of hospitals, number of drug dropboxes) vary. 
+
+Instruction:
+1. Clone/download the repo
+2. Using Firefox/Safari, open the html file in resources_changes_v5.
+
+Languages/Tools used:
+1. Python
+2. iPython Notebook
+3. D3.js
+4. OpenRefine
+5. R
+
 
 Version 0.1
 Cleaned OD Data from https://oasis.state.ga.us/
